@@ -1,3 +1,5 @@
 venv/
 models/*.pkl
 data/
+__pycache__/
+*.log
