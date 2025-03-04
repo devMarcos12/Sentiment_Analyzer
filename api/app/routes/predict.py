@@ -24,5 +24,5 @@ def predict_sentiment(review: ReviewInput):
     
     text_vectorized = vectorizer.transform([review.text])
     prediction = model.predict(text_vectorized)[0]
-    sentiment = "positivo" if prediction == 1 else "negativo"
+    sentiment = "Positive" if prediction == 1 else "Negative"
     return {"sentiment": sentiment}
