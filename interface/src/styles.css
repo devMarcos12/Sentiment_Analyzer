@@ -111,6 +111,8 @@ button:hover {
   position: fixed;
   bottom: 0;
   left: 0;
+  text-align: center;
+  flex-wrap: wrap;
 }
 
 .linkedin-icon {
@@ -122,4 +124,44 @@ button:hover {
 
 .linkedin-icon:hover {
   color: #005582;
+}
+
+@media screen and (max-width: 425px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .ai-icon {
+    display: none;
+  }
+
+  .container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .text-area {
+    font-size: 14px;
+    min-height: 80px;
+
+  }
+
+  .text-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
 }
