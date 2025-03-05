@@ -5,4 +5,3 @@ __pycache__/
 *.log
 interface/node_modules/
 *.json
-!vercel.json
