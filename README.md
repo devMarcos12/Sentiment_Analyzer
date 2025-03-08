@@ -28,3 +28,8 @@ O objetivo principal deste projeto é analisar sentimentos em textos escritos em
 Contém os arquivos csv utilizados para treinamento dos modelos, o modelo foi treinados para sentimentos positivos e negativos.
 
 Link: https://www.kaggle.com/datasets/luisfredgs/imdb-ptbr/code
+
+## Desempenho do Modelo
+
+
+![accuracy](https://github.com/user-attachments/assets/5f1a847c-dfe5-42ac-be4d-c64fe822b89f)
