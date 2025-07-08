@@ -21,7 +21,7 @@ export default function SentimentAnalyzer() {
         setResult(null);
 
         try {
-            const response = await axios.post("https://web-production-e0eb.up.railway.app/predict/", { text });
+            const response = await axios.post("http://localhost:8000/predict/", { text });
             setResult(response.data.sentiment);
         } catch (err) {
             setError("Failed to analyze sentiment. Try again later.");

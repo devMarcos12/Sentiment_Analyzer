@@ -8,9 +8,9 @@ nltk.download('stopwords')
 nltk.download('punkt')
 nltk.download('punkt_tab')
 
-dataset_raw_path = "./data/raw/dataset.csv"
-dataset_clean_path = "./data/processed/dataset_clean.csv"
-dataset_preprocessed_path = "./data/processed/dataset_preprocessed.csv"
+dataset_raw_path = "data/raw/dataset.csv"
+dataset_clean_path = "data/processed/dataset_clean.csv"
+dataset_preprocessed_path = "data/processed/dataset_preprocessed.csv"
 
 df = pd.read_csv(dataset_raw_path, delimiter=",", encoding="utf-8", quotechar='"')
 

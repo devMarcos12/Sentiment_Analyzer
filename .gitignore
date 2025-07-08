@@ -4,4 +4,3 @@ data/
 __pycache__/
 *.log
 interface/node_modules/
-*.json

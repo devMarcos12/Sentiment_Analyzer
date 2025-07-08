@@ -5,14 +5,27 @@ import os
 
 router = APIRouter()
 
-MODEL_PATH = "../models/naive_bayes_model.pkl"
-VECTORIZER_PATH = "../models//tfidf_vectorizer.pkl"
+# Define paths for both Docker and local environments
+DOCKER_MODEL_PATH = "/app/models/naive_bayes_model.pkl"
+DOCKER_VECTORIZER_PATH = "/app/models/tfidf_vectorizer.pkl"
+LOCAL_MODEL_PATH = "../../src/models/naive_bayes_model.pkl"
+LOCAL_VECTORIZER_PATH = "../../src/models/tfidf_vectorizer.pkl"
 
-if os.path.exists(MODEL_PATH) and os.path.exists(VECTORIZER_PATH):
-    model = joblib.load(MODEL_PATH)
-    vectorizer = joblib.load(VECTORIZER_PATH)
+# Check for models in Docker environment first
+if os.path.exists(DOCKER_MODEL_PATH) and os.path.exists(DOCKER_VECTORIZER_PATH):
+    model = joblib.load(DOCKER_MODEL_PATH)
+    vectorizer = joblib.load(DOCKER_VECTORIZER_PATH)
+# If not found, check for models in local environment
+elif os.path.exists(LOCAL_MODEL_PATH) and os.path.exists(LOCAL_VECTORIZER_PATH):
+    model = joblib.load(LOCAL_MODEL_PATH)
+    vectorizer = joblib.load(LOCAL_VECTORIZER_PATH)
+# If no models are found in either path, raise an error
 else:
-    raise FileNotFoundError("Model or vectorizer not found. Train the model first.")
+    raise FileNotFoundError(
+        "Model or vectorizer not found. Searched in: "
+        f"Docker path ('{DOCKER_MODEL_PATH}') and "
+        f"Local path ('{LOCAL_MODEL_PATH}')"
+    )
 
 class ReviewInput(BaseModel):
     text: str = ""
