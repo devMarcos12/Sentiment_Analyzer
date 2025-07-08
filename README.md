@@ -24,11 +24,9 @@ The main objective of this project is to analyze sentiments in texts written in 
 * React.js (for the application frontend)
 * Docker (for application containerization)
 
-### Data
+## Model Performance
 
-Contains the CSV files used for model training. The model was trained for positive and negative sentiments.
-
-Link: https://www.kaggle.com/datasets/luisfredgs/imdb-ptbr/code
+![accuracy](https://github.com/user-attachments/assets/5f1a847c-dfe5-42ac-be4d-c64fe822b89f)
 
 ## How to run the project (with Docker)
 
@@ -104,9 +102,3 @@ docker run --rm -v $(pwd)/src/data:/app/data -v $(pwd)/src/models:/app/models se
     ```
 
 Access the application at [http://localhost:3000](http://localhost:3000).
-
-
-## Model Performance
-
-
-![accuracy](https://github.com/user-attachments/assets/5f1a847c-dfe5-42ac-be4d-c64fe822b89f)
