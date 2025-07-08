@@ -94,7 +94,6 @@ docker run --rm -v $(pwd)/src/data:/app/data -v $(pwd)/src/models:/app/models se
     ```bash
     docker build -t sentiment-analyzer-interface interface/
     ```
-    *Note: The Dockerfile has been updated to use `node:18` and `npm audit fix --force` to ensure dependencies are secure and up-to-date.*
 
 2.  **Run the container:**
     ```bash
