@@ -30,9 +30,31 @@ Contains the CSV files used for model training. The model was trained for positi
 
 Link: https://www.kaggle.com/datasets/luisfredgs/imdb-ptbr/code
 
-## How to run with Docker
+## How to run the project (with Docker)
 
-## Training the Model with Docker
+1. Required Folder Structure
+
+Before starting, create the following folder structure inside the src directory:
+
+```
+src/
+  data/
+    raw/
+    processed/
+  models/
+```
+
+2. Download the Dataset
+
+https://www.kaggle.com/datasets/luisfredgs/imdb-ptbr/code
+
+Rename the downloaded file to dataset.csv and place it inside the src/data/raw/ folder.
+
+Your final path should look like this:
+
+src/data/raw/dataset.csv
+
+### Training the Model with Docker
 
 First, build the training image:
 
